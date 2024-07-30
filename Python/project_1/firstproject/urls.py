@@ -27,6 +27,8 @@ urlpatterns = [
     # path('result',views.result)
     #using static files
     #path('',views.indexx),
-   path('',views.indexx,name="HOME"),
+   path('',views.indexx,name="indexx"),
    path('addData',views.addData,name="VIEWS"),
+   path('updateData/<int:id>',views.updateData,name="UPDATE"),
+   path('deleteData/<int:id>',views.deleteData,name="DELETE"),
 ]

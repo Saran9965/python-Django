@@ -52,7 +52,27 @@ def addData(req):
         obj.Email=email
         obj.save()
         mydata=datas.objects.all()
-        return redirect('HOME')
+        return redirect('indexx')
         # return render(req,'indexx.html',{'datas':mydata})
     return render(req,'indexx.html')
 
+def updateData(req,id):
+    mydata=datas.objects.get(id=id)
+    if req.method=='POST':
+        name=req.POST['name']
+        age=req.POST['age']
+        address=req.POST['address']
+        email=req.POST['email']  
+        mydata.Name=name
+        mydata.Age=age
+        mydata.Address=address
+        mydata.Email=email
+        mydata.save()
+        
+        return redirect('indexx')
+    return render(req,'update.html',{'data':mydata})
+
+def deleteData(req,id):
+    mydata=datas.objects.get(id=id)
+    mydata.delete()
+    return redirect('indexx')
