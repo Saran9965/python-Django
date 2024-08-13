@@ -19,16 +19,8 @@ from django.urls import path
 from firstapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('a/',views.a),  # (OR) path('welcome/',views.new)
-    # path('b/',views.b) ,
-    # path('c/',views.c) ,
-    # get and post method given below
-    # path('',views.index),
-    # path('result',views.result)
-    #using static files
-    #path('',views.indexx),
-   path('',views.indexx,name="indexx"),
-   path('addData',views.addData,name="VIEWS"),
-   path('updateData/<int:id>',views.updateData,name="UPDATE"),
-   path('deleteData/<int:id>',views.deleteData,name="DELETE"),
+    path('',views.home,name="HOME"),
+    path('login',views.login,name="login"),
+    path('register',views.register,name="Register"),
+    
 ]

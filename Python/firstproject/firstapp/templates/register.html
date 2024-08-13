@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="container-fluid"style="margin-top:100px;">
+    <div class="col-md-offset-4 col-md-4">
+        <h2 class="text-primary page-header text-center">USER REGISTER</h2>
+    </div>
+    <div class="col-md-offset-4 col-md-4 well">
+        <form method="post" autocomplete="off">
+            {{form.as_p}}
+            <button type="submit"class="btn btn-primary">REGISTER</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    body{
+        background-color: rgb(235, 230, 224);
+    }
+.well{
+    box-shadow: 2px 2px 15px black;
+}
+</style>
+{% endblock %}
